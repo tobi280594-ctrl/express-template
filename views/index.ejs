@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <%= title %>
+            </h1>
+        </header>
+
+        <main>
+            <section class="hero">
+                <p class="message">
+                    <%= message %>
+                </p>
+            </section>
+
+            <section class="features">
+                <h2>Features</h2>
+                <ul>
+                    <% features.forEach(function(feature) { %>
+                        <li>
+                            <%= feature %>
+                        </li>
+                        <% }); %>
+                </ul>
+            </section>
+
+            <section class="info">
+                <h2>Getting Started</h2>
+                <p>Edit <code>views/index.ejs</code> to modify this page.</p>
+                <p>Edit <code>src/index.ts</code> to add new routes.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <%= new Date().getFullYear() %> Express + TypeScript + EJS</p>
+        </footer>
+    </div>
+</body>
+
+</html>
